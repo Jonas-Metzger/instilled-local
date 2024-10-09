@@ -18,4 +18,5 @@ objective_weights:
   ee_rot_x: 1.0
   ee_rot_y: 1.0
   ee_rot_z: 1.0
+  maximize_manipulability: 0.0001
 obstacles:
