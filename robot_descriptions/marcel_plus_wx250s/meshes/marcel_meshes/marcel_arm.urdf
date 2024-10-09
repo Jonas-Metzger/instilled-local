@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<robot name="seven_link_robot">
+
+  
+  <link name="floor">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 1 0.01"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 1 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_floor" type="fixed">
+    <parent link="floor"/>
+    <child link="link0"/>
+    <origin xyz="-0.3 0 0" rpy="1.5708 0 -1.5708"/>
+  </joint>
+
+  <link name="link0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link0.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link0.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+  <link name="link1">
+    <visual>
+      <origin xyz="0 0 0.03525" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.02525" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint0" type="revolute">
+    <parent link="link0"/>
+    <child link="link1"/>
+    <origin xyz="0 0 -0.03525" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="100" velocity="1"/>
+  </joint>
+
+  <link name="link2">
+    <visual>
+      <origin xyz="0 -0.0533 0.03525" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0533 0.03525" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint1" type="revolute">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="0 0.0533 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-0.174533" upper="1.39626" effort="100" velocity="1"/>
+  </joint>
+
+  <link name="link3">
+    <visual>
+      <origin xyz="0 -0.15976 0.0605" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link3.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.15976 0.0605" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link3.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint2" type="revolute">
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin xyz="0 0.10646 -0.02525" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.74533" upper="1.39626" effort="100" velocity="1"/>
+  </joint>
+
+  <link name="link4">
+    <visual>
+      <origin xyz="0 -0.16092 0.1755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link4.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.16092 0.1755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link4.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint3" type="revolute">
+    <parent link="link3"/>
+    <child link="link4"/>
+    <origin xyz="0 0.00116 -0.115" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.57" upper="1.57" effort="100" velocity="1"/>
+  </joint>
+
+  <!-- Link 5 -->
+  <link name="link5">
+    <visual>
+      <origin xyz="-0.00136 -0.16093 0.22009" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link5.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.00136 -0.16093 0.22009" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link5.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint4" type="revolute">
+    <parent link="link4"/>
+    <child link="link5"/>
+    <origin xyz="0.00136 0 -0.04459" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="1"/>
+  </joint>
+
+  <!-- Link 6 -->
+  <link name="link6">
+    <visual>
+      <origin xyz="-0.00876 -0.16093 0.23324" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link6.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://link6.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint5" type="revolute">
+    <parent link="link5"/>
+    <child link="link6"/>
+    <origin xyz="0.0074 0 -0.01315" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.39626" upper="0.0872665" effort="100" velocity="1"/>
+  </joint>
+
+  <link name='ball'>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </link>
+  <joint name="ball" type="fixed">
+    <parent link="link5"/>
+    <child link="ball"/>
+    <origin xyz="-0.01462 -0.00054 -0.05572" rpy="0 0 0"/>
+  </joint>
+</robot>

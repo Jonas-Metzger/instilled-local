@@ -1,0 +1,13 @@
+link_radius: 0.05 
+base_links:
+  - wx250s/base_link
+ee_links:
+  - wx250s/gripper_bar_link
+ee_joints: ["left_finger"]
+starting_config: [ 0.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+joint_ordering: [ "waist", "shoulder", "elbow", "forearm_roll", "wrist_angle", "wrist_rotate", ]
+objective_weights:
+  ee_rot_x: 1.0
+  ee_rot_y: 1.0
+  ee_rot_z: 1.0
+obstacles:

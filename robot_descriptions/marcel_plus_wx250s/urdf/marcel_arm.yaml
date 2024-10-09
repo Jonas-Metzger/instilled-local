@@ -1,0 +1,13 @@
+link_radius: 0.05 
+base_links:
+  - floor
+ee_links:
+  - ball
+ee_joints: ["joint5"]
+starting_config: [ 0.0, 0.0, 0.0, -1.0, 0.0]
+joint_ordering: [ "joint0", "joint1", "joint2", "joint3", "joint4"]
+objective_weights:
+  ee_rot_x: 1.0
+  ee_rot_y: 1.0
+  ee_rot_z: 1.0
+obstacles:
