@@ -34,6 +34,4 @@ By default, the server will print the joint states every 1000ms. Replace this te
 
 None of this is safe, you will probably break your robot or burn your house down. Use at your own peril.
 
-Note 1: currently, the `VR-headset browser`<->`laptop browser` handshake is hardcoded to the connection IDs `12345` for faster development. This means anyone can control your robot if you activate VR teleoperation on your laptop's browser.
-
-Note 2: if anything doesn't work or stops working, refresh your laptop and VR browser pages, then connect again. Worst case, you might want to clear your browser cache (on chrome: `right click on page > inspect > right click on refresh button > Empty Cache and Hard Reload`).
+Note: if anything doesn't work or stops working, refresh your laptop and VR browser pages, then connect again. Worst case, you might want to clear your browser cache (on chrome: `right click on page > inspect > right click on refresh button > Empty Cache and Hard Reload`).
