@@ -23,10 +23,8 @@ You can now click on the red, bottom left button on the website to move the left
 To connect a VR headset to teleoperate using hand tracking:
 1. for minimal latency, connect your VR headset and laptop to the same wifi network
 2. visit [demo.instilled.ai/?connectionId=YOUR_SECRET_PASSWORD](https://demo.instilled.ai/) in your headset's browser, and change `YOUR_SECRET_PASSWORD` to something hard to guess.
-3. visit [demo.instilled.ai/host/?connectionId=YOUR_SECRET_PASSWORD](https://demo.instilled.ai/host/) on your laptop and click `Connect VR Headset`.
-4. wait a few seconds, then click `Enter VR` on your headset's browser.
-5. feel free to move your VR headset to your forehead if, like me, you don't love passthrough quality yet. This way hand tracking should stay connected and you can see everything with your own eyes.
-
+3. visit [demo.instilled.ai/host/?connectionId=YOUR_SECRET_PASSWORD](https://demo.instilled.ai/host/) on Chrome and click `Connect VR Teleop`.
+4. wait a few seconds, then click `Enter VR` on your headset's browser. Grab a hand to apply its movement to the robot, release to let go.
 
 By default, the server will print the joint states every 1000ms. Replace this template code with your robot's python API to write the joint states to your robot at your desired frequency.
 
