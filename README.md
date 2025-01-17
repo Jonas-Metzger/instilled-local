@@ -1,6 +1,6 @@
 # Instilled.AI Robot Server
 
-This is a simple server that allows to you use the [instilled.ai teleoperation interface](https://demo.instilled.ai/host/) with your own robot(s).
+This is a simple server that allows to you use the [demo.instilled.ai/host/ teleoperation interface](https://demo.instilled.ai/host/) with your own robot(s).
 
 ## Setup
 ```
